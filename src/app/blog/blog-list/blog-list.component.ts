@@ -15,7 +15,7 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
     // debug current pages
     this.links$ = this.links$.pipe(
-      map((links) => links.filter((link) => link.route.length > 1)),
+      map((links) => links.filter((link) => link.route.length > 5)),
       tap((val) => console.log(val))
     );
   }
