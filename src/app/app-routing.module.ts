@@ -11,6 +11,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
   },
+  {
+    path: '**',
+    redirectTo: 'blog',
+    pathMatch: 'full',
+  }, // matches www.example.com/<any route> to redirect to blogs
 ];
 
 @NgModule({

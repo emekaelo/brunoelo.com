@@ -9,7 +9,7 @@ const routes: Routes = [
     component: PortfolioComponent,
     children: [
       { path: '', component: PortfolioHomeComponent },
-      { path: '**', redirectTo: '', pathMatch: 'full' },
+      //{ path: '**', redirectTo: '', pathMatch: 'full' }, // matches www.example.com/<any route> to redirect to home
     ],
   },
 ];
