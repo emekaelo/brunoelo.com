@@ -6,15 +6,16 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogComponent } from './blog.component';
 
 const routes: Routes = [
-  { path: '', component: BlogListComponent },
   {
     path: '',
     component: BlogComponent,
     children: [
+      { path: '', component: BlogListComponent },
       {
         path: ':slug',
         component: BlogPostComponent,
       },
+
       {
         path: '**',
         component: BlogComponent, // show a blog post not found page

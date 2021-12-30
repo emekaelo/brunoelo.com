@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
-import { Observable } from 'rxjs';
+import { from, Observable, of } from 'rxjs';
+import { concatMap, filter, map, takeWhile, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-blog-list',
@@ -13,8 +14,9 @@ export class BlogListComponent implements OnInit {
 
   ngOnInit(): void {
     // debug current pages
-    this.links$.subscribe((links) => {
-      console.log(links);
-    });
+    this.links$ = this.links$.pipe(
+      map((links) => links.filter((link) => link.route.length > 1)),
+      tap((val) => console.log(val))
+    );
   }
 }

@@ -1,6 +1,7 @@
 ---
 title: 'Latest post'
-description: 'blog description'
+description: 'Sample blog description'
+image: '../../../../assets/anete-lusina-zwsHjakE_iI-unsplash.jpg'
 published: true
 ---
 
