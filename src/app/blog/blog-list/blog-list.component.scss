@@ -1,3 +1,18 @@
 .blog__list{
     padding:5%;
+    grid-template-columns: repeat( auto-fill, minmax(338px, 1fr) );
+    display: grid;
+    gap: 1rem;
+}
+
+@media screen and (min-width:768px) {
+    .blog__list {
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width:883px) {
+    .blog__list {
+        padding:5% 9%;
+    }
 }
