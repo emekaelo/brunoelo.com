@@ -1,7 +1,9 @@
 ---
 title: 'Latest post'
 description: 'Sample blog description'
-image: '../../../../assets/anete-lusina-zwsHjakE_iI-unsplash.jpg'
+image: '../../../../assets/compressed.jpg'
+meta: 'SEO stuff'
+category: ['new']
 published: true
 ---
 

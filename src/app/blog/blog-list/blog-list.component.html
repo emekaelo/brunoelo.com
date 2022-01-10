@@ -1,5 +1,5 @@
-<p>blog-list works!</p>
-<section class="blog__list">
-    <app-blog-card [post]="page" *ngFor="let page of links$ | async"></app-blog-card>
-</section>
-
+<div class="blog__list-container">
+    <section class="blog__list">
+        <app-blog-card [post]="page" *ngFor="let page of links$ | async"></app-blog-card>
+    </section>
+</div>
