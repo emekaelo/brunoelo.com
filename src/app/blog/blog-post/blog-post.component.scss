@@ -1,4 +1,33 @@
-h1 {
-    padding: 5px;
+main {
+  min-height: calc(100vh - 131px);
+  padding: 5% 9%;
+
+  .main__header {
+    display: flex;
+    justify-content: space-between;
+
+    .article__details {
+      width: 50%;
+          display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    }
+
+    .header__image-wrapper {
+      width: 40%;
+      align-self: center;
+      .header__image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
   }
-  
+
+  hr {
+    margin: 2rem 0;
+    border: 1px solid #ffffff1c;
+  }
+}
