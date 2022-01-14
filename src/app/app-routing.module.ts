@@ -8,6 +8,11 @@ const routes: Routes = [
   },
   {
     path: '',
+    redirectTo: 'blog',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     loadChildren: () =>
       import('./portfolio/portfolio.module').then((m) => m.PortfolioModule),
   },
