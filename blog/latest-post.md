@@ -1,5 +1,5 @@
 ---
-title: 'Latest post'
+title: 'Latest post | BrunoElo'
 description: 'Sample blog description'
 image: '../../../../assets/compressed.jpg'
 meta: 'SEO stuff'
