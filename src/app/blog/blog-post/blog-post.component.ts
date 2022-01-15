@@ -31,15 +31,15 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   }
 
   handleMetaTags(routeData: ScullyRoute) {
-    this.seoService.updateTitle(routeData.title!);
+    this.seoService.updateTitle(routeData.meta.title);
     this.seoService.updateMetaTags(
-      routeData.title!,
+      routeData.meta.title,
       routeData.description,
       routeData.image,
       routeData.category
     );
     this.seoService.updateTwitterMeta(
-      routeData.title!,
+      routeData.meta.title,
       routeData.description,
       routeData.image
     );

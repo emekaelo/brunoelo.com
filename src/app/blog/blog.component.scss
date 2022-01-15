@@ -1,9 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
 :host {
-  background-color: #070212;
+  // SCSS variables
+  $bgColor: #070212;
+  $fontColor: #b6b6b6;
+
+  background-color: $bgColor;
   font-family: "Josefin Sans", sans-serif;
-  color: #b6b6b6;
+  color: $fontColor;
   display: block;
 }
 
@@ -26,9 +30,9 @@
   padding: 1rem;
 }
 
-@media screen and (min-width:883px) {
-    .blog__header {
-        padding-left: 9%;
-        padding-right: 9%;
-    }
+@media screen and (min-width: 883px) {
+  .blog__header {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
 }

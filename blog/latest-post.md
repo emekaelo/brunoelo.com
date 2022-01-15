@@ -1,8 +1,8 @@
 ---
-title: 'Latest post | BrunoElo'
+title: 'Latest post'
 description: 'Sample blog description'
 image: '../../../../assets/compressed.jpg'
-meta: 'SEO stuff'
+meta: {title: 'Latest post | BrunoElo Blog'}
 category: ['new']
 published: true
 ---
