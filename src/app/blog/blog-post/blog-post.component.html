@@ -2,9 +2,17 @@
     <article class="main__article">
         <header class="main__header">
             <div class="article__details">
-                <p>March 9, 2021 - 12 min to read</p>
+                <div>
+                    <div class="blog-category__list">
+                        <span *ngFor="let category of currentRoute.category; let i = index"
+                            class="blog-category__item">{{category}}<span class="blog-category__delimiter"
+                                *ngIf="i !== currentRoute.category.length - 1"> | </span>
+                        </span>
+                    </div>
+                    <p class="article__date">March 9, 2021 - 12 min to read</p>
+                </div>
                 <h1 class="article__title">Jamstack SEO Guide: Content SEO</h1>
-                <h1 class="article__title">{{currentRoute.title}}</h1>
+                <!-- <h1 class="article__title">{{currentRoute.title}}</h1> -->
                 <p class="article__subtitle">In part one, we’ve discussed technical SEO. Now it is time to focus on
                     content SEO and on-page and off-page optimization.</p>
             </div>

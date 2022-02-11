@@ -17,6 +17,10 @@
   align-items: center;
   padding: 2rem 5%;
   font-size: 1.2rem;
+  position: sticky;
+    top: 0;
+    background-color: #0702129e;
+    backdrop-filter: blur(16px);
   a {
     color: #ffffffe6;
     &:hover {

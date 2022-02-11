@@ -162,3 +162,14 @@ Using stored unhandled routes!.
 Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------
+
+-----------------------------------
+The port "2667" is not available for the live-reload server.
+live reload will not be available. You can configure a different port in the config file.
+-----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+Route "/blog" not provided by angular app
