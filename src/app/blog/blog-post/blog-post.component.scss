@@ -87,6 +87,10 @@ p {
   line-height: 1.1;
 }
 
+img {
+  width: 100%;
+}
+
 blockquote {
   border-left: 3px solid #45414c;
   margin: 0;
@@ -95,6 +99,8 @@ blockquote {
 
 table {
   border-collapse: collapse;
+  overflow: auto;
+  display: block;
   th {
     background-color: #0e081b;
     text-align: left;
