@@ -6,6 +6,7 @@ import {BlogComponent} from './blog.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogCardComponent } from './blog-list/blog-card/blog-card.component';
+import { BlogTagsComponent } from './blog-categories/blog-tags.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { BlogCardComponent } from './blog-list/blog-card/blog-card.component';
     BlogPostComponent,
     BlogListComponent,
     BlogCardComponent,
+    BlogTagsComponent,
   ],
   imports: [CommonModule, BlogRoutingModule, ScullyLibModule],
 })

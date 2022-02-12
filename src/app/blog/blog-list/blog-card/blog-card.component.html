@@ -1,11 +1,7 @@
 <article class="blog__item">
     <div class="blog__image-wrapper"><img class="blog__image" [src]="post.image" alt=""></div>
     <div class="blog__content">
-        <div class="blog-category__list">
-            <span *ngFor="let category of post.category; let i = index" class="blog-category__item">{{category}}<span
-                    class="blog-category__delimiter" *ngIf="i !== post.category.length - 1"> | </span>
-            </span>
-        </div>
+        <blog-tags [categories]="post.category"></blog-tags>
         <a class="blog__link" [routerLink]="post.route" routerLinkActive>{{post.title}}</a>
         <!-- <blockquote class="blog__description">{{post.description}}</blockquote> -->
         <div class="blog__info">
