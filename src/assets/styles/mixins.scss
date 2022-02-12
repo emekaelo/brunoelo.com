@@ -3,3 +3,8 @@
     max-width: 1300px;
     margin: auto;
 }
+
+@mixin table-cell-spacing {
+    padding: 1rem;    
+    border: 1px solid $lightBorderColor;
+}
