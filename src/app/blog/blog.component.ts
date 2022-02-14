@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   preserveWhitespaces: true,
 })
 export class BlogComponent implements OnInit {
+  currentYear = new Date().getFullYear();
   ngOnInit() {}
 
   constructor() {}
