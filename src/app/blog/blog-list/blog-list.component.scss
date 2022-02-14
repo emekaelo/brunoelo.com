@@ -5,16 +5,10 @@
     @include center-body;
 }
 .blog__list{
-    padding:5%;
+    padding: 5%;
     grid-template-columns: repeat( auto-fill, minmax(330px, 1fr) );
     display: grid;
     gap: 2rem;
-}
-
-@media screen and (min-width:883px) {
-    .blog__list {
-        padding:5% 9%;
-    }
 }
 
 @media screen and (max-width: 366px) {

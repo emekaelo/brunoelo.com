@@ -1,26 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
 // SCSS variables
-  @import "../../assets/styles/variables.scss";
-
+@import "../../assets/styles/variables.scss";
+@import "../../assets/styles/mixins.scss";
 
 :host {
   background-color: $bgColor;
   font-family: "Josefin Sans", sans-serif;
   color: $fontColor;
+  font-weight: 300;
   display: block;
 }
 
 .blog__header {
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 5%;
   font-size: 1.2rem;
   position: sticky;
-    top: 0;
-    background-color: #0702129e;
-    backdrop-filter: blur(16px);
+  top: 0;
+  background-color: #0702129e;
+  backdrop-filter: blur(16px);
+  @include center-body;
+
   a {
     color: $titleColor;
     &:hover {
@@ -37,33 +41,16 @@
 /* Custom module scope scrollbar */
 ::ng-deep {
   ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0.5rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: $bgColor;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: $accentColor;
-  border-radius: 0.2rem;
-}
-}
-
-
-@media screen and (min-width: 883px) {
-  .blog__header {
-    padding-left: 9%;
-    padding-right: 9%;
+    width: 0.5rem;
+    height: 0.5rem;
   }
-}
 
-@media screen and (min-width:1400px) {
-  .blog__header {
-    max-width: 1051px;
-    padding-left: 0rem;
-    padding-right: 0rem;
-    margin: auto;
+  ::-webkit-scrollbar-track {
+    background-color: $bgColor;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $accentColor;
+    border-radius: 0.2rem;
   }
 }

@@ -3,7 +3,7 @@
 
 main {
   min-height: calc(100vh - 131px);
-  padding: 5% 9%;
+  padding: 5%;
   @include center-body;
 
   .main__header {
@@ -65,16 +65,20 @@ a {
   text-decoration: none;
   display: inline-block;
   color: $accentColor;
+  transition: color 0.2s ease-in;
+  &:hover {
+    color: #ffc600;
+  }
   &::after {
-    content: '';
+    content: "";
     display: block;
-    height: 3px;
-    background-color:$accentColor ;
-    transition: width .3s;
+    height: 2px;
+    background-color: $accentColor;
+    transition: width 0.3s;
 
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 250ms ease-in;
+    transition: transform 0.2s ease-in;
   }
   &:hover::after {
     transform: scaleX(1);
@@ -107,6 +111,7 @@ table {
     @include table-cell-spacing;
   }
   td {
+    font-size: 1.2rem;
     @include table-cell-spacing;
   }
 }
@@ -115,11 +120,8 @@ table {
   .main__header {
     flex-direction: column;
   }
-}
 
-@media screen and (min-width: 1400px) {
-  main {
-    padding-left: 125px;
-    padding-right: 125px;
+  blockquote {
+    padding-left: 1rem;
   }
 }
