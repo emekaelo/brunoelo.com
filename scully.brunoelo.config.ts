@@ -12,6 +12,7 @@ export const config: ScullyConfig = {
       slug: {
         folder: './blog',
       },
+      postRenderers: ['fouc'],
     },
   },
 };

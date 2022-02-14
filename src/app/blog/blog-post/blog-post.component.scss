@@ -45,6 +45,16 @@ main {
     margin: 2rem 0;
     border: 1px solid $lightBorderColor;
   }
+
+  &::-moz-selection {
+    background-color: #ba9eb0;
+    color: #ffffff;
+  }
+
+  &::selection {
+    background-color: #ba9eb0;
+    color: #ffffff;
+  }
 }
 
 h1,
@@ -113,6 +123,18 @@ table {
   td {
     font-size: 1.2rem;
     @include table-cell-spacing;
+  }
+}
+
+* {
+  &::-moz-selection {
+    background-color: $accentColor;
+    color: $bgColor;
+  }
+
+  &::selection {
+    background-color: $accentColor;
+    color: $bgColor;
   }
 }
 
