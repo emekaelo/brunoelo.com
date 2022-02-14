@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
-import { Observable, Subject } from 'rxjs';
+import { fromEvent, Observable, Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
 import { SeoService } from 'src/app/core/services/seo.service';
 
@@ -15,6 +15,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
     .pipe(tap((route) => console.log(route)));
   onDestroy$ = new Subject<any>();
   currentRoute: ScullyRoute = {} as ScullyRoute;
+  readProgressWidth: number = 0;
 
   constructor(
     private scully: ScullyRoutesService,
@@ -24,10 +25,11 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.currentRoute$
       .pipe(takeUntil(this.onDestroy$))
-      .subscribe((routeData) => {
+      .subscribe((routeData: ScullyRoute) => {
         this.currentRoute = routeData;
         this.handleMetaTags(this.currentRoute);
       });
+    this.addScrollListener();
   }
 
   handleMetaTags(routeData: ScullyRoute) {
@@ -43,6 +45,20 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       routeData.description,
       routeData.image
     );
+  }
+
+  addScrollListener() {
+    const scrollSource: Observable<Event> = fromEvent(document, 'scroll');
+    scrollSource.pipe(takeUntil(this.onDestroy$)).subscribe((event: Event) => {
+      this.updateReadProgress(event);
+    });
+  }
+
+  updateReadProgress(event: Event) {
+    const scrollHeight =
+      (event.target as Document).body.scrollHeight - window.innerHeight;
+    const scrollTop = (event.target as Document).documentElement.scrollTop;
+    this.readProgressWidth = (scrollTop / scrollHeight) * 100;
   }
 
   ngOnDestroy() {

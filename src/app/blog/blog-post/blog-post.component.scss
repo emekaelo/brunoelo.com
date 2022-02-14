@@ -1,6 +1,16 @@
 @import "../../../assets/styles/variables.scss";
 @import "../../../assets/styles/mixins.scss";
 
+.read-progress-bar {
+  background-color: $accentColor;
+  height: 3px;
+  position: sticky;
+  top: 83px;
+  border-radius: 2px;
+  background: rgb(7,2,18);
+background: linear-gradient(90deg, $bgColor1 0%, rgba(123,78,10,1) 5%, rgba(255,165,0,1) 73%, $accentColor 100%);
+}
+
 main {
   min-height: calc(100vh - 131px);
   padding: 5%;
