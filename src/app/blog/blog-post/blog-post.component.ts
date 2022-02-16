@@ -15,7 +15,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
     .pipe(tap((route) => console.log(route)));
   onDestroy$ = new Subject<any>();
   currentRoute: ScullyRoute = {} as ScullyRoute;
-  readProgressWidth: number = 0;
+  readProgressWidthInPercent: number = 0;
 
   constructor(
     private scully: ScullyRoutesService,
@@ -55,10 +55,12 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   }
 
   updateReadProgress(event: Event) {
+    const docElement = (event.target as Document).documentElement;
+    const docBody = (event.target as Document).body;
     const scrollHeight =
-      (event.target as Document).body.scrollHeight - window.innerHeight;
-    const scrollTop = (event.target as Document).documentElement.scrollTop;
-    this.readProgressWidth = (scrollTop / scrollHeight) * 100;
+      (docElement.scrollHeight || docBody.scrollHeight) - window.innerHeight;
+    const scrollTop = docElement.scrollTop || docBody.scrollTop;
+    this.readProgressWidthInPercent = (scrollTop / scrollHeight) * 100;
   }
 
   ngOnDestroy() {
