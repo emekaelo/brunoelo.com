@@ -5,7 +5,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 
 import { BlogComponent } from './blog.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
     component: BlogComponent,
