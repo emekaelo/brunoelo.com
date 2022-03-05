@@ -55,6 +55,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - run: npm run scully:serve
     - uses: cypress-io/github-action@v2
       with:
         build: npm run build
