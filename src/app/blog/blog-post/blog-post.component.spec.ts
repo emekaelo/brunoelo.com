@@ -89,7 +89,7 @@ describe('BlogPostComponent', () => {
     expect(articleSubtitleEl.textContent).toBeDefined();
   });
 
-  fdescribe('meta tag handler', () => {
+  describe('meta tag handler', () => {
     beforeEach(() => {
       component.handleMetaTags(stubRoute);
     });
