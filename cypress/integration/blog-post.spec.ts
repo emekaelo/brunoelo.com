@@ -22,8 +22,8 @@ describe('List of blog posts', () => {
   });
 
   it('should have a filled read progress bar', () => {
-    cy.intercept('**/index.html').as('blogPage');
-    cy.wait('@blogPage');
+    // cy.intercept('**/index.html').as('blogPage');
+    // cy.wait('@blogPage');
     cy.scrollTo('bottom');
     cy.get('.read-progress-bar')
       .should('have.attr', 'style')
