@@ -10,8 +10,8 @@ export class SeoService {
   /** 
   Set the title of the current HTML document.
   @param newTitle */
-  updateTitle(title: string) {
-    this.titleService.setTitle(title);
+  updateTitle(newTitle: string) {
+    this.titleService.setTitle(newTitle);
   }
 
   /** 

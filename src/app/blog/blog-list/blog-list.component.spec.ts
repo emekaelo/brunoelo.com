@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By, Title } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ScullyRoute } from '@scullyio/ng-lib';
@@ -34,56 +34,18 @@ describe('BlogListComponent', () => {
   });
 
   it('should render correct number of blog posts', () => {
-    const scullyRoutesMock: ScullyRoute[] = [
-      {
-        route: '/blog/latest-post',
-        title: 'Jamstack SEO Guide: Content SEO',
-        description: 'Sample blog description',
-        image: '../../../../assets/compressed.jpg',
-        meta: {
-          title: 'Jamstack SEO Guide: Content SEO | BrunoElo Blog',
-        },
-        category: ['new'],
-        published: true,
-        sourceFile: 'latest-post.md',
+    const scullyRoutesMock: ScullyRoute[] = new Array(4).fill({
+      route: '/blog/latest-post',
+      title: 'Jamstack SEO Guide: Content SEO',
+      description: 'Sample blog description',
+      image: '../../../../assets/compressed.jpg',
+      meta: {
+        title: 'Jamstack SEO Guide: Content SEO | BrunoElo Blog',
       },
-      {
-        route: '/blog/latest-post',
-        title: 'Jamstack SEO Guide: Content SEO',
-        description: 'Sample blog description',
-        image: '../../../../assets/compressed.jpg',
-        meta: {
-          title: 'Jamstack SEO Guide: Content SEO | BrunoElo Blog',
-        },
-        category: ['new'],
-        published: true,
-        sourceFile: 'latest-post.md',
-      },
-      {
-        route: '/blog/latest-post',
-        title: 'Jamstack SEO Guide: Content SEO',
-        description: 'Sample blog description',
-        image: '../../../../assets/compressed.jpg',
-        meta: {
-          title: 'Jamstack SEO Guide: Content SEO | BrunoElo Blog',
-        },
-        category: ['new'],
-        published: true,
-        sourceFile: 'latest-post.md',
-      },
-      {
-        route: '/blog/latest-post',
-        title: 'Jamstack SEO Guide: Content SEO',
-        description: 'Sample blog description',
-        image: '../../../../assets/compressed.jpg',
-        meta: {
-          title: 'Jamstack SEO Guide: Content SEO | BrunoElo Blog',
-        },
-        category: ['new'],
-        published: true,
-        sourceFile: 'latest-post.md',
-      },
-    ];
+      category: ['new'],
+      published: true,
+      sourceFile: 'latest-post.md',
+    });
     component.links$ = of(scullyRoutesMock);
     fixture.detectChanges();
     const blogListDe = fixture.debugElement;

@@ -2,7 +2,7 @@ import { DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
-import { ScullyLibModule } from '@scullyio/ng-lib';
+import { ScullyContentComponent, ScullyLibModule } from '@scullyio/ng-lib';
 import { BlogTagsComponent } from '../blog-categories/blog-tags.component';
 
 import { BlogPostComponent } from './blog-post.component';
@@ -15,7 +15,11 @@ describe('BlogPostComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule, ScullyLibModule],
-      declarations: [BlogPostComponent, BlogTagsComponent],
+      declarations: [
+        BlogPostComponent,
+        BlogTagsComponent,
+        ScullyContentComponent,
+      ],
     }).compileComponents();
   });
 
