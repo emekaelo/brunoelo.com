@@ -1,7 +1,7 @@
 describe('List of blog posts', () => {
   it('Visits the initial project page', () => {
     cy.visit('/');
-    cy.url().should('eq', `http://localhost:4300/blog`);
+    cy.url().should('eq', `http://localhost:4200/blog`);
   });
 
   it('should navigate to a blog post', () => {
@@ -12,7 +12,7 @@ describe('List of blog posts', () => {
       .then((href) => {
         console.log(href);
         cy.get('@blogPost').click();
-        cy.url().should('eq', `http://localhost:4300${href}`);
+        cy.url().should('eq', `http://localhost:4200${href}`);
 
         cy.get('.blog-category__list').should('exist');
         cy.get('.article__date').should('exist');
@@ -32,6 +32,6 @@ describe('List of blog posts', () => {
 
   it('should navigate to blog list page from blog post', () => {
     cy.get('.blog__header').contains('Blog').click();
-    cy.url().should('eq', 'http://localhost:4300/blog');
+    cy.url().should('eq', 'http://localhost:4200/blog');
   });
 });
