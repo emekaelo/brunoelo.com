@@ -59,3 +59,4 @@ jobs:
       with:
         build: npm run build
         start: npm start
+        scully:serve: npm run scully:serve
