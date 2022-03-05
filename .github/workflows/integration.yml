@@ -55,7 +55,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      uses: cypress-io/github-action@v2
+    - uses: cypress-io/github-action@v2
       with:
         build: npm run build
         start: npm start
