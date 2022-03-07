@@ -56,7 +56,7 @@ describe('SeoService', () => {
     });
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(6, {
       property: 'og:url',
-      content: 'https://www.brunoelo.dev',
+      content: 'https://www.brunoelo.com',
     });
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(7, {
       property: 'og:description',
@@ -80,7 +80,7 @@ describe('SeoService', () => {
     });
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(4, {
       property: 'twitter:url',
-      content: 'https://www.brunoelo.dev',
+      content: 'https://www.brunoelo.com',
     });
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(5, {
       property: 'twitter:description',
