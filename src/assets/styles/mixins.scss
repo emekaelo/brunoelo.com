@@ -1,0 +1,10 @@
+
+@mixin center-body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+@mixin table-cell-spacing {
+    padding: .75rem;    
+    border: 1px solid $lightBorderColor;
+}

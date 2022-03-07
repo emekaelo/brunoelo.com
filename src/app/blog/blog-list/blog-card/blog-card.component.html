@@ -1,0 +1,11 @@
+<article class="blog__item" [routerLink]="post.route">
+    <div class="blog__image-wrapper"><img class="blog__image" [src]="post.image" alt=""></div>
+    <div class="blog__content">
+        <blog-tags [categories]="post.category"></blog-tags>
+            <a class="blog__link">{{post.title}}</a>
+            <!-- <blockquote class="blog__description">{{post.description}}</blockquote> -->
+            <div class="blog__info">
+                <span class="blog__date">Dec 29th 2021</span><span class="blog__read-time">9 min read</span>
+            </div>
+            </div>
+</article>

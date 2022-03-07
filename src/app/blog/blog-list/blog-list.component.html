@@ -1,0 +1,5 @@
+<div class="blog__list-container">
+    <main class="blog__list">
+        <app-blog-card [post]="page" *ngFor="let page of links$ | async"></app-blog-card>
+    </main>
+</div>
