@@ -29,9 +29,9 @@ export class BlogListComponent implements OnInit {
     this.seoService.updateTitle('BrunoElo Blog');
     this.seoService.updateMetaTags(
       'BrunoElo Blog',
+      'Blog for best tech content relating to software development, top resources for learning, quick guides, tutorials and more',
       '',
-      '',
-      'tech, software, development'
+      'tech, software, development, frontend'
     );
     this.seoService.updateTwitterMeta('BrunoElo Blog', '', '');
   }
