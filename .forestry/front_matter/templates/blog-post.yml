@@ -29,3 +29,5 @@ fields:
 - type: boolean
   name: published
   label: published
+pages:
+- blog/forestry-content.md
