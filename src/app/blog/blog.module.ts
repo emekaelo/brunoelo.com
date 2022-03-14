@@ -7,6 +7,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogCardComponent } from './blog-list/blog-card/blog-card.component';
 import { BlogTagsComponent } from './blog-categories/blog-tags.component';
+import { DisqusModule } from 'ngx-disqus';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { BlogTagsComponent } from './blog-categories/blog-tags.component';
     BlogCardComponent,
     BlogTagsComponent,
   ],
-  imports: [CommonModule, BlogRoutingModule, ScullyLibModule],
+  imports: [CommonModule, BlogRoutingModule, ScullyLibModule, DisqusModule],
 })
 export class BlogModule {}

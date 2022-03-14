@@ -16,6 +16,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   onDestroy$ = new Subject<any>();
   currentRoute: ScullyRoute = {} as ScullyRoute;
   readProgressWidthInPercent: number = 0;
+  pageId: string = '';
 
   constructor(
     private scully: ScullyRoutesService,
@@ -27,6 +28,7 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.onDestroy$))
       .subscribe((routeData: ScullyRoute) => {
         this.currentRoute = routeData;
+        this.pageId = this.currentRoute.route;
         this.handleMetaTags(this.currentRoute);
       });
     this.addScrollListener();
