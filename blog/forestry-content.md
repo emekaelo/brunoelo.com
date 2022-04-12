@@ -2,7 +2,7 @@
 title: Forestry content
 description: yep I've integrated the CMS so this is just a test for creating with
   it
-image: "../../../../assets/new-unsplash.jpg"
+image: "/assets/images/honnda.jpg"
 meta:
   title: ''
   image: ''

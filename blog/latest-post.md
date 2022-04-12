@@ -1,7 +1,7 @@
 ---
 title: 'Jamstack SEO Guide: Content SEO'
 description: 'Sample blog description'
-image: '../../../../assets/compressed.jpg'
+image: '/assets/images/honnda.jpg'
 meta: {title: 'Jamstack SEO Guide: Content SEO | BrunoElo Blog'}
 category: ['new']
 published: true
