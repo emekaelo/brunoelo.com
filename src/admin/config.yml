@@ -18,6 +18,6 @@ collections:
       #- {label: "Slug", name: "slug", widget: "string"}
       - {label: "Published", name: "published", widget: "boolean", default: true}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Post Image", name: "image", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
