@@ -37,13 +37,13 @@ export class BlogPostComponent implements OnInit, OnDestroy {
     this.seoService.updateMetaTags(
       routeData.title!,
       routeData.description,
-      routeData.image,
+      routeData.image.source,
       routeData.seo.keywords
     );
     this.seoService.updateTwitterMeta(
       routeData.title!,
       routeData.description,
-      routeData.image
+      routeData.image.source
     );
   }
 

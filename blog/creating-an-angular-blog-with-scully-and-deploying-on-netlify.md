@@ -16,7 +16,9 @@ category:
     - scully
     - tutorials
     - angular
-image: /assets/images/typewriter.jpg
+image:
+    source: /assets/images/typewriter.jpg
+    alt: black and white typewriter on white table
 publishedDate: May 3, 2022
 lastModifiedDate: May 3, 2022
 ---

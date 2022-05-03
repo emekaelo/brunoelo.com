@@ -1,5 +1,6 @@
 <article class="blog__item" [routerLink]="post.route" [title]="post.title">
-    <div class="blog__image-wrapper"><img class="blog__image" [src]="post.image" width="100" height="100" alt=""></div>
+    <div class="blog__image-wrapper"><img class="blog__image" [src]="post.image.source" width="100" height="100"
+            [alt]="post.image.alt"></div>
     <div class="blog__content">
         <blog-tags [categories]="post.category"></blog-tags>
             <a class="blog__link" [routerLink]="post.route">{{post.title}}</a>
