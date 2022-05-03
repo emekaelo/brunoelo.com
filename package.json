@@ -30,7 +30,6 @@
     "@scullyio/ng-lib": "^2.0.0",
     "@scullyio/scully": "^2.0.0",
     "@scullyio/scully-plugin-puppeteer": "^2.0.0",
-    "netlify-cms-app": "^2.15.68",
     "ngx-disqus": "^2.4.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",

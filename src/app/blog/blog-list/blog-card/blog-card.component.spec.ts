@@ -35,7 +35,7 @@ describe('BlogCardComponent', () => {
 
   it('should have an image element with alt attribute', () => {
     const blogImageDe: DebugElement = blogCardDe.query(
-      By.css('.blog__image[alt=""]')
+      By.css('.blog__image[alt]')
     );
     const blogImageEl: HTMLElement = blogImageDe.nativeElement;
     expect(blogImageEl).toBeDefined();

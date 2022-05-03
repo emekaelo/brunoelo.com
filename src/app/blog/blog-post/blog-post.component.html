@@ -5,23 +5,19 @@
             <div class="article__details">
                 <div>
                     <blog-tags [categories]="currentRoute.category"></blog-tags>
-                    <p class="article__date">March 9, 2021 - 12 min to read</p>
+                    <p class="article__date">{{currentRoute.publishedDate}} - {{currentRoute.readTime}} min to read</p>
                 </div>
-                <h1 class="article__title">{{currentRoute.title}}</h1>
-                <p class="article__subtitle">In part one, we’ve discussed technical SEO. Now it is time to focus on
-                    content SEO and on-page and off-page optimization.</p>
+                <h1 class="article__title">{{currentRoute?.title}}</h1>
+                <p class="article__subtitle">{{currentRoute.description}}</p>
             </div>
             <div class="header__image-wrapper">
-                <img class="header__image" src="../../../assets/compressed.jpg" alt="">
+                <img class="header__image" [src]="currentRoute.image.source" [alt]="currentRoute.image.alt">
             </div>
         </header>
         <hr class="">
     </article>
-<h3>ScullyIo content</h3>
-<hr>
 <!-- This is where Scully will inject the static HTML -->
 <scully-content></scully-content>
 <hr>
-<h4>End of content</h4>
-<disqus [identifier]="pageId"></disqus>
+<disqus [identifier]="pageId" [url]="'https://brunoelo.com'"></disqus>
 </main>

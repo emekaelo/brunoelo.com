@@ -5,12 +5,11 @@ describe('List of blog posts', () => {
   });
 
   it('should navigate to a blog post', () => {
-    cy.get('.blog__item').first().as('blogPost');
+    cy.get('.blog__link').first().as('blogPost');
 
     cy.get('@blogPost')
-      .should('have.attr', 'ng-reflect-router-link')
+      .should('have.attr', 'href')
       .then((href) => {
-        console.log(href);
         cy.get('@blogPost').click();
         cy.url().should('eq', `http://localhost:4200${href}`);
 
