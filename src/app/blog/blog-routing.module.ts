@@ -15,11 +15,6 @@ export const routes: Routes = [
         path: ':slug',
         component: BlogPostComponent,
       },
-
-      {
-        path: '**',
-        component: BlogComponent, // show a blog post not found page
-      },
     ],
   },
 ];

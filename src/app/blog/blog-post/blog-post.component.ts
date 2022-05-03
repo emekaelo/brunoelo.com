@@ -10,9 +10,7 @@ import { SeoService } from 'src/app/core/services/seo.service';
   styleUrls: ['./blog-post.component.scss'],
 })
 export class BlogPostComponent implements OnInit, OnDestroy {
-  currentRoute$: Observable<ScullyRoute> = this.scully
-    .getCurrent()
-    .pipe(tap((route) => console.log(route)));
+  currentRoute$: Observable<ScullyRoute> = this.scully.getCurrent();
   onDestroy$ = new Subject<any>();
   currentRoute: ScullyRoute = {} as ScullyRoute;
   readProgressWidthInPercent: number = 0;
@@ -35,15 +33,15 @@ export class BlogPostComponent implements OnInit, OnDestroy {
   }
 
   handleMetaTags(routeData: ScullyRoute) {
-    this.seoService.updateTitle(routeData.meta.title);
+    this.seoService.updateTitle(routeData.title!);
     this.seoService.updateMetaTags(
-      routeData.meta.title,
+      routeData.title!,
       routeData.description,
       routeData.image,
-      routeData.category
+      routeData.seo.keywords
     );
     this.seoService.updateTwitterMeta(
-      routeData.meta.title,
+      routeData.title!,
       routeData.description,
       routeData.image
     );

@@ -11,6 +11,12 @@
     gap: 2rem;
 }
 
+@media screen and (min-width: 768px) {
+    .blog__list{
+        grid-template-columns: repeat( auto-fill, minmax(209px, 1fr) );
+    }
+}
+
 @media screen and (max-width: 366px) {
     .blog__list{
         grid-template-columns: 1fr;

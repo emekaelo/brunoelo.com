@@ -1,4 +1,5 @@
 import { ScullyConfig, setPluginConfig } from '@scullyio/scully';
+import 'prismjs/components/prism-git.js';
 
 setPluginConfig('md', { enableSyntaxHighlighting: true });
 

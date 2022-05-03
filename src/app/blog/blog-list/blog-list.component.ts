@@ -19,8 +19,7 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
     // debug current pages
     this.links$ = this.links$.pipe(
-      map((links) => links.filter((link) => link.route.length > 5)),
-      tap((val) => console.log(val))
+      map((links) => links.filter((link) => link.route.length > 5))
     );
     this.handleMetaTags();
   }
@@ -29,9 +28,9 @@ export class BlogListComponent implements OnInit {
     this.seoService.updateTitle('BrunoElo Blog');
     this.seoService.updateMetaTags(
       'BrunoElo Blog',
-      'Blog for best tech content relating to software development, top resources for learning, quick guides, tutorials and more',
+      'Blog for tech content and articles relating to software development, learning progress, career journey, quick guides, tutorials and more',
       '',
-      'tech, software, development, frontend'
+      'tech, software, developer, frontend,frontend developer, frontend engineer, software developer, Emeka Elo-Chukwuma'
     );
     this.seoService.updateTwitterMeta('BrunoElo Blog', '', '');
   }

@@ -8,3 +8,11 @@
     padding: .75rem;    
     border: 1px solid $lightBorderColor;
 }
+
+@mixin single-line-code {
+    background-color: #24243d; //#293146;
+    border-radius: 0.25rem;
+    padding: 0 0.25rem;
+    font-size: 1.2rem;
+    color: #ffdb00; //#ffce00;
+}

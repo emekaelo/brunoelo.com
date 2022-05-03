@@ -10,7 +10,6 @@ describe('List of blog posts', () => {
     cy.get('@blogPost')
       .should('have.attr', 'href')
       .then((href) => {
-        console.log(href);
         cy.get('@blogPost').click();
         cy.url().should('eq', `http://localhost:4200${href}`);
 
