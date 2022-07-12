@@ -26,6 +26,7 @@ export class SeoService {
     description: string,
     imageUrl: string,
     keywords: string,
+    canonicalUrl: string = '',
     type: string = 'website'
   ) {
     this.meta.updateTag({ name: 'description', content: description });
@@ -35,7 +36,7 @@ export class SeoService {
     this.meta.updateTag({ property: 'og:image', content: imageUrl });
     this.meta.updateTag({
       property: 'og:url',
-      content: 'https://www.brunoelo.com',
+      content: `https://brunoelo.com${canonicalUrl}`,
     });
     this.meta.updateTag({ property: 'og:description', content: description });
   }
