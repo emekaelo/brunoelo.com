@@ -33,7 +33,7 @@ describe('SeoService', () => {
   });
 
   it('should call updateTag with tags', () => {
-    service.updateMetaTags(stubTitle, 'desc', 'imgUrl', 'key');
+    service.updateMetaTags(stubTitle, 'desc', 'imgUrl', 'key', '/canonicalUrl');
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(1, {
       name: 'description',
       content: 'desc',
@@ -56,7 +56,7 @@ describe('SeoService', () => {
     });
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(6, {
       property: 'og:url',
-      content: 'https://www.brunoelo.com',
+      content: 'https://brunoelo.com/canonicalUrl',
     });
     expect(metaServiceSpy.updateTag).toHaveBeenNthCalledWith(7, {
       property: 'og:description',
