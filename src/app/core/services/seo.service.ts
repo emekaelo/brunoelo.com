@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ScullyRoute } from '@scullyio/ng-lib';
 
 @Injectable({
   providedIn: 'root',
@@ -26,19 +27,44 @@ export class SeoService {
     description: string,
     imageUrl: string,
     keywords: string,
-    canonicalUrl: string = '',
+    routeData?: ScullyRoute,
     type: string = 'website'
   ) {
     this.meta.updateTag({ name: 'description', content: description });
     this.meta.updateTag({ name: 'keywords', content: keywords });
     this.meta.updateTag({ property: 'og:title', content: title });
     this.meta.updateTag({ property: 'og:type', content: type });
-    this.meta.updateTag({ property: 'og:image', content: imageUrl });
+    this.meta.updateTag({
+      property: 'og:image',
+      content: imageUrl.includes('https://')
+        ? imageUrl
+        : `https://www.brunoelo.com${imageUrl}`,
+    });
     this.meta.updateTag({
       property: 'og:url',
-      content: `https://brunoelo.com${canonicalUrl}`,
+      content: `https://brunoelo.com${
+        routeData?.route ? routeData?.route : ''
+      }`,
     });
     this.meta.updateTag({ property: 'og:description', content: description });
+    if (type === 'article') {
+      this.meta.updateTag({
+        property: 'article:author',
+        content: 'Emeka Elo-Chukwuma',
+      });
+      this.meta.updateTag({
+        property: 'article:published_time',
+        content: this.convertDateToUTC(routeData?.publishedDate),
+      });
+      this.meta.updateTag({
+        property: 'article:modified_time',
+        content: this.convertDateToUTC(routeData?.lastModifiedDate),
+      });
+    } else {
+      this.meta.removeTag("property='article:author'");
+      this.meta.removeTag("property='article:published_time'");
+      this.meta.removeTag("property='article:modified_time'");
+    }
   }
 
   /** 
@@ -52,7 +78,10 @@ export class SeoService {
       property: 'twitter:card',
       content: 'summary_large_image',
     });
-    this.meta.updateTag({ property: 'twitter:image', content: imageUrl });
+    this.meta.updateTag({
+      property: 'twitter:image',
+      content: `https://www.brunoelo.com${imageUrl}`,
+    });
     this.meta.updateTag({
       property: 'twitter:url',
       content: 'https://www.brunoelo.com',
@@ -61,5 +90,11 @@ export class SeoService {
       property: 'twitter:description',
       content: description,
     });
+  }
+
+  convertDateToUTC(date: string) {
+    let timezoneOffset = new Date(date).getTimezoneOffset() * 60000; //offset in milliseconds
+    let localISOTime = new Date(Date.now() - timezoneOffset).toISOString();
+    return localISOTime;
   }
 }

@@ -39,7 +39,8 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       routeData.description,
       routeData.image.source,
       routeData.seo.keywords,
-      routeData.route
+      routeData,
+      'article'
     );
     this.seoService.updateTwitterMeta(
       routeData.title!,
