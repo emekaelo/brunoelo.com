@@ -33,8 +33,14 @@ main {
       justify-content: space-between;
       min-width: 0;
       .article__date {
-        margin-top: 0.5rem;
         font-size: 1rem;
+        &:first-of-type {
+          margin-bottom: 0;
+          margin-top: 0.5rem;
+        }
+        &:last-of-type {
+          margin-top: 0.25rem;
+        }
       }
       .article__title {
         font-size: 2rem;

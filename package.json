@@ -11,6 +11,7 @@
     "test:leakage": "jest --watchAll --runInBand --detectOpenHandles",
     "scully": "npx scully --",
     "scully:serve": "npx scully serve --",
+    "scully:post": "ng g @scullyio/init:post --metaDataFile=\".scully/front-matter-templates/blog-post.yaml\"",
     "e2e": "ng e2e",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"

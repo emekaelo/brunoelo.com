@@ -6,6 +6,7 @@
                 <div>
                     <blog-tags [categories]="currentRoute.category"></blog-tags>
                     <p class="article__date">{{currentRoute.publishedDate}} - {{currentRoute.readTime}} min to read</p>
+                    <p class="article__date">{{currentRoute.lastModifiedDate}} - Last updated</p>
                 </div>
                 <h1 class="article__title">{{currentRoute?.title}}</h1>
                 <p class="article__subtitle">{{currentRoute.description}}</p>
