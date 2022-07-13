@@ -527,3 +527,19 @@ Using stored unhandled routes!.
 Using stored unhandled routes!.
    To discover new routes in the angular app use "npm run scully -- --scanRoutes"
 ----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "npm run scully -- --scanRoutes"
+----------------------------------
+Puppeteer error while rendering "/blog/creating-an-angular-blog-with-scully-and-deploying-on-netlify"
+TimeoutError: Navigation timeout of 30000 ms exceeded
+ we will retry rendering this page up to 3 times.Puppeteer error while rendering "/blog/adding-netlify-cms-to-an-angular-scully-blog-site"
+TimeoutError: Navigation timeout of 30000 ms exceeded
+ we will retry rendering this page up to 3 times.
+

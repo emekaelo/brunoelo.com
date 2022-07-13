@@ -27,7 +27,7 @@ lastModifiedDate: July 13, 2022
 
 ## Introduction
 This article aims to guide you through the configuration of netlify CMS in your angular project that is built with Scully static site generator and deployed on Netlify.
-We will be using the Angular scully blog project we built in [a previous article](https://brunoelo.hashnode.dev/creating-an-angular-blog-with-scully-and-deploying-on-netlify). Kindly check it out if you haven't so you can be up to speed.
+We will be using the Angular scully blog project we built in <a href='https://brunoelo.com/blog/creating-an-angular-blog-with-scully-and-deploying-on-netlify' target='_blank'>a previous article</a>. Kindly check it out if you haven't so you can be up to speed.
 ## Demo
 Here is the final result of what we will be building
 -  [CMS demo](https://angular-scully-site.netlify.app/admin) for [Angular-Scully blog](https://angular-scully-site.netlify.app)
