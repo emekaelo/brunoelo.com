@@ -28,7 +28,7 @@ lastModifiedDate: July 14, 2022
 
 ## Introduction
 This article aims to guide you through the configuration of Forestry CMS in your angular project that is built with Scully static site generator and deployed on Netlify.
-We will be using the Angular scully blog project we built in [a previous article](https://www.brunoelo.com/blog/creating-an-angular-blog-with-scully-and-deploying-on-netlify). Kindly check it out if you haven't so you can be up to speed.
+We will be using the Angular scully blog project we built in <a href="https://www.brunoelo.com/blog/creating-an-angular-blog-with-scully-and-deploying-on-netlify" target="_blank">a previous article</a>. Kindly check it out if you haven't so you can be up to speed.
 
 ## Forestry CMS
 Forestry CMS is a git based headless CMS that can be used to manage content on sites stored in a repository. It makes commits and pushes to your selected repository when you save content on the CMS as well as fetching latest commits to update content on the CMS. It allows you embrace the jamstack.
