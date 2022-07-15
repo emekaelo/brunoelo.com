@@ -3,6 +3,10 @@
 /* check node_modules/prismjs/themes/ for the available themes */
 @import '~prismjs/themes/prism-tomorrow';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
