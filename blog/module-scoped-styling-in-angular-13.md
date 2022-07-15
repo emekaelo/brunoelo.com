@@ -118,4 +118,4 @@ Feel free to leave suggestions or questions in the comment especially if you hav
 ### Connect
 If you would like to connect with me, I'm available on;
 - Discord: `brunoelo#8120`
-- Twitter: [BrunoElo]('https://twitter.com/brunoelo')
+- Twitter: [BrunoElo](https://twitter.com/brunoelo)

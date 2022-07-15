@@ -218,4 +218,4 @@ Please be good and have fun posting. Thank you for reading.
 #### Connect
 If you would like to connect with me, I'm available on;
 - Discord: `brunoelo#8120`
-- Twitter: [BrunoElo]('https://twitter.com/brunoelo')
+- Twitter: [BrunoElo](https://twitter.com/brunoelo)
