@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 import { SeoService } from 'src/app/core/services/seo.service';
 
 @Component({
@@ -27,8 +27,7 @@ export class BlogListComponent implements OnInit {
               new Date(b.publishedDate).getTime() -
               new Date(a.publishedDate).getTime()
           )
-      ),
-      tap((links) => console.log(links))
+      )
     );
     this.handleMetaTags();
   }
