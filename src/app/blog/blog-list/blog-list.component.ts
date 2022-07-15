@@ -19,7 +19,16 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
     // debug current pages
     this.links$ = this.links$.pipe(
-      map((links) => links.filter((link) => link.route.length > 5))
+      map((links) =>
+        links
+          .filter((link) => link.route.length > 5)
+          .sort(
+            (a, b) =>
+              new Date(b.publishedDate).getTime() -
+              new Date(a.publishedDate).getTime()
+          )
+      ),
+      tap((links) => console.log(links))
     );
     this.handleMetaTags();
   }
