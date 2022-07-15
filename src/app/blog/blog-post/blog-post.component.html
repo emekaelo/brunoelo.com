@@ -12,7 +12,7 @@
                 <p class="article__subtitle">{{currentRoute.description}}</p>
             </div>
             <div class="header__image-wrapper">
-                <img class="header__image" [src]="currentRoute.image.source" [alt]="currentRoute.image.alt">
+                <img class="header__image" [src]="currentRoute.image?.source" [alt]="currentRoute.image?.alt">
             </div>
         </header>
         <hr class="">
