@@ -215,7 +215,7 @@ Please be good and have fun posting. Thank you for reading.
 ## Reference
 - [Netlify documentation for adding Netlify CMS to your site](https://www.netlifycms.org/docs/add-to-your-site/)
 
-#### Connect
+### Connect
 If you would like to connect with me, I'm available on;
 - Discord: `brunoelo#8120`
 - Twitter: [BrunoElo](https://twitter.com/brunoelo)
