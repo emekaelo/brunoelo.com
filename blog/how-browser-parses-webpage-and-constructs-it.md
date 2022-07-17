@@ -1,5 +1,5 @@
 ---
-title: How browser rendering works - concise summary
+title: How browser parses webpage and constructs it
 description: A concise explanation of the processes involved in browser rendering from the client url navigation to server interaction, parsing and then rendering.
 published: true
 readTime: 3
