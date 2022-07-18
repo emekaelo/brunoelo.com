@@ -23,7 +23,8 @@ lastModifiedDate: July 16, 2022
 ---
 
 ## Introduction
-When building applications, you cannot avoid handling authentication and one of the ways to handle authentication is by receiving user data via a sign up or registration form and such forms contain passwords. You don't just want your users to use strong passwords that meet certain criteria but also visually inform them of how strong their passwords are during account creation.  
+When building applications, you cannot avoid handling authentication and one of the ways to handle authentication is by receiving user data via a sign up or registration form and such forms contain passwords. You don't just want your users to use strong passwords that meet certain criteria but also visually inform them of how strong their passwords are during account creation.
+
 In as much as password validation is done on the backend, the frontend validation helps guide the user in sending what the backend expects which ensures that your users as well as your systems are more secure. This article will show how to implement password validation from scratch(no library) as well as show the strength of the current password as the user types.
 
 ## Demo
@@ -106,7 +107,8 @@ Lastly, we have the `passwordStrength` variable whose value is gotten from the n
 const passwordStrength = Object.values(passwordTracker).filter(value => value).length;
 ```
 The idea is if 3 validation criteria are passed, the corresponding properties will have truthy values while the rest have falsy values (`null`). To know the number of criteria passed, we use the `Object.values()` method on the `passwordTracker` which returns an array of *values*. Then we filter for the truthy values and then obtain the length of the array with a `.length`.  
-`passwordStrength` is mainly use to determine the color and width of the password strength meter and also show or hide the `'Must contain '` part based on if all criteria are passed or not.  
+`passwordStrength` is mainly use to determine the color and width of the password strength meter and also show or hide the `'Must contain '` part based on if all criteria are passed or not.
+
 With CSS-in-JS, we are able to execute javaScript in our CSS styles using [short circuit evaluation](https://en.wikipedia.org/wiki/Short-circuit_evaluation) which assigns various colors to the `background-color` property. The width of the meter is given in percentage by multiplying the ratio of the number of passed criteria(which could be 1,2,3,4 or 5) to the total number of criteria(5) by 100
 ```css
 .password-strength-meter::before {
