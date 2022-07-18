@@ -1,6 +1,6 @@
 Project scope
 ---
-- [ ] blog
+- [x] blog
 - [ ] portfolio
 
 PR Type
