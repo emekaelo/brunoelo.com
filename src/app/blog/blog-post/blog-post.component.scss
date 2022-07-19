@@ -43,7 +43,6 @@ main {
         }
       }
       .article__title {
-        font-size: 2rem;
         font-weight: 600;
         color: $titleColor;
         margin: 1rem 0;
@@ -89,8 +88,16 @@ h6 {
   color: #e2e2e2;
 }
 
+h1 {
+  font-size: clamp(2rem, 2.7vw, 2.9rem);
+}
+
 h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.7rem);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
 }
 
 ul {
