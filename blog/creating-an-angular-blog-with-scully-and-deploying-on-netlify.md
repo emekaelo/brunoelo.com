@@ -225,7 +225,7 @@ metaTitle: First post
 ```
 I have added an image in the corresponding directory which I'll render in post.
 When we're satisfied with our markdown file, we can build with the `npx scully` command.
-### A tip on knowing which to build with
+### The right build command
 > `ng build` is only needed when you modified something in your angular app. The scully config file, plugins, and eventual markdown files are not part of your Angular app. Although this may seem evident, if this is your first time using Scully it is easy to rebuild Angular even if it is not needed. When writing Scully plugins OR modifying your blog's markdown files, you DO NOT need to ng build the app each time you re-run Scully. Again, ng build Angular only if the Angular app changes 
 
 ## Showing all blog posts
