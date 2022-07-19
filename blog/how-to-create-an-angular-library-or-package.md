@@ -327,13 +327,14 @@ npm publish
 ```
 Yay! 🥳 you just published your library.
 
+![Enjoy](https://c.tenor.com/gfcR46X_rm8AAAAC/madara-uchiha-ninja.gif)
+
 The published library built in this article can be found [here](https://www.npmjs.com/package/ngx-stuff).  
-[Here is the repository](https://github.com/BrunoElo/library-app) for the entire project.
+You can checkout [the repository for the entire project](https://github.com/BrunoElo/library-app).
 
 ## Conclusion
 Libraries are essential to the software development process and I hope this article has helped you understand how to build libraries or packages in Angular. Let me know if you have any comments or suggestions in the comment section and lastly, feel free to share the article so that others can learn. Happy publishing!
 
-![Enjoy](https://c.tenor.com/gfcR46X_rm8AAAAC/madara-uchiha-ninja.gif)
 ### Connect
 If you would like to connect with me, I'm available on;
 - Discord: `brunoelo#8120`
