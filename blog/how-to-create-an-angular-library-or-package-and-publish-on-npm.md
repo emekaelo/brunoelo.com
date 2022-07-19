@@ -1,6 +1,6 @@
 ---
-title: How to create an Angular library or package
-description: Libraries and packages help to abstract reusable code and improve efficiency during development. Learn how to create libraries for the Angular ecosystem..
+title: How to create an Angular library or package and publish on npm
+description: Libraries and packages help to abstract reusable code and improve efficiency during development. Learn how to create libraries for the Angular ecosystem.
 published: true
 readTime: 7
 seo:
