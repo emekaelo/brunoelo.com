@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { DISQUS_SHORTNAME } from 'ngx-disqus';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +20,7 @@ import { DISQUS_SHORTNAME } from 'ngx-disqus';
       registrationStrategy: 'registerWhenStable:30000',
     }),
   ],
-  providers: [{ provide: DISQUS_SHORTNAME, useValue: 'brunoelo' }],
+  providers: [],
 
   bootstrap: [AppComponent],
 })
