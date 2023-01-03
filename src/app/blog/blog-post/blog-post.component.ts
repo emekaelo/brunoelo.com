@@ -1,4 +1,12 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { ScullyRoute, ScullyRoutesService } from '@scullyio/ng-lib';
 import { fromEvent, Observable, Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
@@ -9,7 +17,8 @@ import { SeoService } from 'src/app/core/services/seo.service';
   templateUrl: './blog-post.component.html',
   styleUrls: ['./blog-post.component.scss'],
 })
-export class BlogPostComponent implements OnInit, OnDestroy {
+export class BlogPostComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('commentContainer') commentContainer!: ElementRef<any>;
   currentRoute$: Observable<ScullyRoute> = this.scully.getCurrent();
   onDestroy$ = new Subject<any>();
   currentRoute: ScullyRoute = {} as ScullyRoute;
@@ -18,7 +27,8 @@ export class BlogPostComponent implements OnInit, OnDestroy {
 
   constructor(
     private scully: ScullyRoutesService,
-    private seoService: SeoService
+    private seoService: SeoService,
+    private renderer: Renderer2
   ) {}
 
   ngOnInit(): void {
@@ -63,6 +73,30 @@ export class BlogPostComponent implements OnInit, OnDestroy {
       (docElement.scrollHeight || docBody.scrollHeight) - window.innerHeight;
     const scrollTop = docElement.scrollTop || docBody.scrollTop;
     this.readProgressWidthInPercent = (scrollTop / scrollHeight) * 100;
+  }
+
+  ngAfterViewInit(): void {
+    this.createGiscusComments();
+  }
+
+  createGiscusComments() {
+    const script: HTMLScriptElement = this.renderer.createElement('script'); // document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    script.setAttribute('data-repo', 'brunoelo/brunoelo.com-discussion');
+    script.setAttribute('data-repo-id', 'R_kgDOIty9ZQ');
+    script.setAttribute('data-category', 'Announcements');
+    script.setAttribute('data-category-id', 'DIC_kwDOIty9Zc4CTY0');
+    script.setAttribute('data-mapping', 'title');
+    script.setAttribute('data-strict', '1');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'top');
+    script.setAttribute('data-theme', 'preferred_color_scheme');
+    script.setAttribute('data-lang', 'en');
+    script.setAttribute('data-loading', 'lazy');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.setAttribute('async', '');
+    this.renderer.appendChild(this.commentContainer.nativeElement, script);
   }
 
   ngOnDestroy() {
