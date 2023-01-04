@@ -80,12 +80,12 @@ export class BlogPostComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   createGiscusComments() {
-    const script: HTMLScriptElement = this.renderer.createElement('script'); // document.createElement('script');
+    const script: HTMLScriptElement = this.renderer.createElement('script');
     script.setAttribute('src', 'https://giscus.app/client.js');
     script.setAttribute('data-repo', 'brunoelo/brunoelo.com-discussion');
     script.setAttribute('data-repo-id', 'R_kgDOIty9ZQ');
     script.setAttribute('data-category', 'Announcements');
-    script.setAttribute('data-category-id', 'DIC_kwDOIty9Zc4CTY0');
+    script.setAttribute('data-category-id', 'DIC_kwDOIty9Zc4CTY0-');
     script.setAttribute('data-mapping', 'title');
     script.setAttribute('data-strict', '1');
     script.setAttribute('data-reactions-enabled', '1');
