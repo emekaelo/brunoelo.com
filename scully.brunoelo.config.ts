@@ -15,4 +15,7 @@ export const config: ScullyConfig = {
       },
     },
   },
+  puppeteerLaunchOptions: {
+    args: ['--no-sandbox', '--disable-setuid--sandbox'],
+  },
 };
