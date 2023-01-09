@@ -81,21 +81,26 @@ export class BlogPostComponent implements OnInit, AfterViewInit, OnDestroy {
 
   createGiscusComments() {
     const script: HTMLScriptElement = this.renderer.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    script.setAttribute('data-repo', 'brunoelo/brunoelo.com-discussion');
-    script.setAttribute('data-repo-id', 'R_kgDOIty9ZQ');
-    script.setAttribute('data-category', 'Announcements');
-    script.setAttribute('data-category-id', 'DIC_kwDOIty9Zc4CTY0-');
-    script.setAttribute('data-mapping', 'title');
-    script.setAttribute('data-strict', '1');
-    script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'top');
-    script.setAttribute('data-theme', 'preferred_color_scheme');
-    script.setAttribute('data-lang', 'en');
-    script.setAttribute('data-loading', 'lazy');
-    script.setAttribute('crossorigin', 'anonymous');
-    script.setAttribute('async', '');
+    const giscusScriptProps = {
+      src: 'https://giscus.app/client.js',
+      'data-repo': 'brunoelo/brunoelo.com-discussion',
+      'data-repo-id': 'R_kgDOIty9ZQ',
+      'data-category': 'Announcements',
+      'data-category-id': 'DIC_kwDOIty9Zc4CTY0-',
+      'data-mapping': 'title',
+      'data-strict': '1',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'top',
+      'data-theme': 'preferred_color_scheme',
+      'data-lang': 'en',
+      'data-loading': 'lazy',
+      crossorigin: 'anonymous',
+      async: '',
+    };
+    Object.entries(giscusScriptProps).forEach(([attribute, value]) => {
+      script.setAttribute(attribute, value);
+    });
     this.renderer.appendChild(this.commentContainer.nativeElement, script);
   }
 
