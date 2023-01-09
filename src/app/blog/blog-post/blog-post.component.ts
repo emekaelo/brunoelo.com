@@ -76,7 +76,7 @@ export class BlogPostComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.createGiscusComments();
+    // this.createGiscusComments();
   }
 
   createGiscusComments() {
