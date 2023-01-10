@@ -15,6 +15,7 @@ export const config: ScullyConfig = {
       },
     },
   },
+  defaultPostRenderers: ['seoHrefOptimise'],
   puppeteerLaunchOptions: {
     args: ['--no-sandbox', '--disable-setuid--sandbox'],
   },
