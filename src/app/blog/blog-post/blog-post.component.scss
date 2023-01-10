@@ -181,6 +181,14 @@ table {
   }
 }
 
+iframe[title="YouTube video player"] {
+  margin: auto;
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  margin-bottom: 5rem;
+}
+
 * {
   &::-moz-selection {
     background-color: $accentColor;

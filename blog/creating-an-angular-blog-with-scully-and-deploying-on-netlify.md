@@ -457,7 +457,7 @@ Provide the path to the folder where the scully generated static pages are as we
 ![deploy site](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fopcljobmo13vwgtaie3.png)
 Click the `Deploy site` button and watch as netlify builds your project.
 Congratulations on making it to the end and have fun personalising your site as you like.
-<img src="https://tenor.com/view/naruto-kakashi-dance-dancing-happy-gif-4899160.gif" style="width:35%;">
+![Thumbs up](https://media.giphy.com/media/lds79WZpA3SN2/giphy.gif)
 Here's a link to the [deployed site](https://angular-scully-site.netlify.app/)
 ## Conclusion
 I do hope this article has been helpful in guiding you through creating your blog site with Angular and scully from scratch.

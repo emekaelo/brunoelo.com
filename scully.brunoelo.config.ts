@@ -26,7 +26,7 @@ useSitemapPlugin({
   ignoredRoutes: ['/404'],
   routes: {
     '/blog/:slug': {
-      changeFreq: 'weekly',
+      changeFreq: 'monthly',
       priority: '0.9',
       sitemapFilename: 'sitemap-blog-posts.xml',
       merge: true,
