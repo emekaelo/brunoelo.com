@@ -36,13 +36,13 @@ export class BlogListComponent implements OnInit {
     this.seoService.updateTitle('BrunoElo Blog');
     this.seoService.updateMetaTags(
       'BrunoElo Blog',
-      'Blog for tech content and articles relating to software development, learning progress, career journey, quick guides, tutorials and more',
+      'Blog by Emeka Elo-Chukwuma for tech content and articles relating to software development, learning progress, career journey, quick guides, tutorials and more',
       '/assets/images/ppb.jpg',
       'tech, software, developer, frontend,frontend developer, frontend engineer, software developer, Emeka Elo-Chukwuma'
     );
     this.seoService.updateTwitterMeta(
       'BrunoElo Blog',
-      'Blog for tech content and articles relating to software development, learning progress, career journey, quick guides, tutorials and more',
+      'Blog by Emeka Elo-Chukwuma for tech content and articles relating to software development, learning progress, career journey, quick guides, tutorials and more',
       '/assets/images/ppb.jpg'
     );
   }

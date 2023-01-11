@@ -30,7 +30,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/manifest.webmanifest",
-              "src/admin"
+              "src/admin",
+              "src/ads.txt"
             ],
             "styles": [
               "src/styles.scss"
